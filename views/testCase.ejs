@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" class="scrollbar" id="style-7">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Case Creation</title>
+</head>
+<link rel="stylesheet" href="css/button.css">
+<link rel="stylesheet" href="css/style.css">
+
+<body>
+    <div class="navMain">
+        <a href="/" id="projectName"><span>AI</span> Innovators</a>
+        <nav>
+            <a href="/" class="active">Home</a>
+            <a href="/testCase" id="log_in">Test Case Creation</a>
+        </nav>
+    </div>
+    <!-- Search section -->
+    <section class="sbody" style="margin-left: 2rem; margin-right: 2rem">
+        <div class="sright" style="align-items: flex-start;">
+            <form action="/testCase" method="post">
+                <h1 style="font-size: 3rem; margin-bottom: 2rem">Test Case Creation</h1>
+                <textarea id="textBox" name="textData" placeholder="Enter your requirements here..." rows="18" style="width: 60rem; margin-bottom: 2rem"></textarea>
+                <br>
+                <label for="Positive" style="font-size: 1.5rem; ">Positive Test Case:</label>
+                <input type="checkbox" name="Positive" id="">
+                <br>
+                <label for="Negative" style="font-size: 1.5rem;">Negative Test Case:</label>
+                <input type="checkbox" name="Negative" id="">
+                <button class='glowing-btn' type="submit" role="button" style="font-size: 1.5rem; margin-top: 2rem"><span class='glowing-txt'>Create Now</span></button>
+            </form>
+        </div>
+        <div class="sleft" style="align-items: flex-start;">
+            <br>
+            <br>
+            <% if (typeof result !== 'undefined') { %>
+                <h1 style="font-size: 3rem; margin-bottom: 2rem; margin-top: 0.5rem">Result</h1>
+                <textarea id="resultBox" name="resultBox" placeholder="Test Cases..." rows="18" style="width: 60rem;"><%= result %></textarea>
+            <% } else { %>
+                <h1 style="font-size: 3rem; margin-bottom: 2rem; margin-top: 0.5rem">No result found</h1>
+            <% } %>
+        </div>
+    </section>
+
+    <!-- footer of the page -->
+    <footer>
+        <h1>Made with ❤️ by Compile App QA Team</h1>
+    </footer>
+</body>
+
+</html>

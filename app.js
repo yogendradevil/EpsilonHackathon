@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const OpenAI = require("openai");
 
 const openai = new OpenAI.default({
-    apiKey: 'sk-proj-WwMhPrTSIc7fRbWB7ihOT3BlbkFJtHhjcuOb3DacbIjYRzK5',
+    apiKey: 'fake',
 });
 
 app.use(bodyParser.urlencoded({ extended: true }));
